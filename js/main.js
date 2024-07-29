@@ -19,8 +19,8 @@
 
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  // spaceBetween: 30,
   // centeredSlides: true,
   // loop: true,
   breakpoints: {
