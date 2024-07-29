@@ -1,0 +1,131 @@
+@import "scss/bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import "../css/partials/swiper";
+
+//color variables
+
+$black: #000000;
+$white: #dddddd;
+$orange: #FF9705;
+// *{
+//     border: 1px solid red;
+// }
+
+
+.services_sect{
+    position: relative;
+
+    .services_sect-inner{
+        padding-bottom: 8rem;
+        background-color: #eaeaea;
+
+        .swiper-slide{
+            position: relative;
+
+            &:hover{
+                figcaption{
+                    transform: translateY(-100%);
+                    background-color: $white;
+                    
+                }
+
+                .caption_description{
+                    opacity: 1!important;
+                    color: $black!important;
+                }
+
+                .caption_inner{
+                    h2{
+                        color: $black!important;
+                    }
+                }
+            }
+            figure{
+                padding-top: 120%;
+                width: 100%;
+                margin: 0;
+            }
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            figcaption{
+                transition: all .3s linear;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 50%;
+                
+                z-index: 10;
+                transform: translateY(-3.5rem);
+                padding: 1rem;
+
+                .caption_inner{
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    transition: all .3s linear;
+                    h2{
+                    
+                        font-size: calc(.8rem + .3vw);
+                        color: $white;
+                        text-transform: uppercase;
+                        margin-bottom: 1rem;
+                    }
+
+                    .caption_description{
+                        overflow: hidden;
+                        overflow-y: auto;
+                        opacity: 0;
+                        color: $white;
+                        transition: all .3s linear;
+                        transition-delay: .3s;
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    .services_swiper-btns{
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        width: 12rem;
+        height: 4rem;
+        transform: translateX(-50%);
+        
+
+        .swiper-button-next,.swiper-button-prev{
+            &:after{
+                display: none;
+            }
+
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            line-height: 2rem;
+            text-align: center;
+            background-color: $black;
+            color: $white;
+            font-size: 1.5rem;
+        }
+
+        .swiper-button-disabled{
+            background-color: $orange!important;
+            opacity: 1;
+        }
+    }
+
+}
+
+
